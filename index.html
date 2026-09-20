@@ -9,7 +9,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="jawa.js" defer></script>
   </head>
   <body>
     <nav class="navbar">
@@ -35,23 +34,45 @@
           <div class="nav-links-desktop">
             <a href="#beranda" class="nav-link">Beranda</a>
             <a href="#struktur" class="nav-link">Struktur</a>
-            <a href="#siswa" class="nav-link">Siswa</a>
+            <a href="#siswa" class="nav-link">Anggota</a>
             <a href="#galeri" class="nav-link">Galeri</a>
+            <a href="#proyek" class="nav-link">Proyek</a>
+            <button
+              id="theme-toggle-btn"
+              class="theme-toggle-btn"
+              aria-label="Ganti tema"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
           </div>
 
           <div class="mobile-btn-wrapper">
-            <button id="mobile-menu-btn" class="mobile-btn">
-              <i class="fas fa-bars text-2xl"></i>
+            <button
+              id="theme-toggle-btn-mobile"
+              class="theme-toggle-btn-mobile"
+              aria-label="Ganti tema"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+            <button
+              id="mobile-menu-btn"
+              class="mobile-btn"
+              aria-label="Buka menu"
+            >
+              <span class="hamburger-line line1"></span>
+              <span class="hamburger-line line2"></span>
+              <span class="hamburger-line line3"></span>
             </button>
           </div>
         </div>
       </div>
 
-      <div id="mobile-menu" class="mobile-menu-box hidden">
+      <div id="mobile-menu" class="mobile-menu-box">
         <a href="#beranda" class="mobile-link">Beranda</a>
         <a href="#struktur" class="mobile-link">Struktur</a>
-        <a href="#siswa" class="mobile-link">Siswa</a>
+        <a href="#siswa" class="mobile-link">Anggota</a>
         <a href="#galeri" class="mobile-link">Galeri</a>
+        <a href="#proyek" class="mobile-link">Proyek</a>
       </div>
     </nav>
 
@@ -214,7 +235,27 @@
           </div>
         </div>
 
-        <div id="student-grid" class="students-grid"></div>
+        <div class="carousel-wrapper">
+          <button
+            id="carousel-prev"
+            class="carousel-btn"
+            aria-label="Sebelumnya"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <div id="carousel-viewport" class="carousel-viewport">
+            <div id="student-grid" class="students-grid"></div>
+          </div>
+
+          <button
+            id="carousel-next"
+            class="carousel-btn"
+            aria-label="Berikutnya"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
 
         <div id="no-results" class="empty-results">
           <i class="fas fa-user-slash empty-results-icon"></i>
@@ -235,8 +276,16 @@
         <div class="container-galeri">
           <div class="galeri-card">
             <div class="galeri-content">
-              <div class="galeri-img">
-                <img src="img/placeholdergalery.jpg" alt="endrigay" />
+              <div class="galeri-img" onclick="opengaleriImage(this)">
+                <img
+                  src="img/fotbar1.png"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/600x400/181818/FFD700?text=Bersama+Wali+Kelas';
+                  "
+                  alt="endrigay"
+                />
               </div>
               <div class="galeri-text">
                 <div class="galeri-header">
@@ -269,16 +318,32 @@
                   Pellentesque viverra dapibus odio, eget.
                 </p>
               </div>
-              <div class="galeri-img">
-                <img src="img/placeholdergalery.jpg" alt="endrigay" />
+              <div class="galeri-img" onclick="opengaleriImage(this)">
+                <img
+                  src="img/fotbar2.png"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/600x400/181818/FFD700?text=Bersama+Wali+Kelas';
+                  "
+                  alt="endrigay"
+                />
               </div>
             </div>
           </div>
 
           <div class="galeri-card">
             <div class="galeri-content">
-              <div class="galeri-img">
-                <img src="img/placeholdergalery.jpg" alt="endrigay" />
+              <div class="galeri-img" onclick="opengaleriImage(this)">
+                <img
+                  src="img/fotbar3.png"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/600x400/181818/FFD700?text=Bersama+Wali+Kelas';
+                  "
+                  alt="endrigay"
+                />
               </div>
               <div class="galeri-text">
                 <div class="galeri-header">
@@ -311,8 +376,16 @@
                   Pellentesque viverra dapibus odio, eget.
                 </p>
               </div>
-              <div class="galeri-img">
-                <img src="img/placeholdergalery.jpg" alt="endrigay" />
+              <div class="galeri-img" onclick="opengaleriImage(this)">
+                <img
+                  src="img/fotbar4.png"
+                  onerror="
+                    this.onerror = null;
+                    this.src =
+                      'https://placehold.co/600x400/181818/FFD700?text=Bersama+Wali+Kelas';
+                  "
+                  alt="endrigay"
+                />
               </div>
             </div>
           </div>
@@ -320,6 +393,54 @@
       </div>
     </section>
     <!-- SECTION GALERI END -->
+
+    <section id="proyek" class="section-projects reveal">
+      <div class="nav-container">
+        <div class="section-header">
+          <h2 class="section-title">
+            Proyek <span class="text-gold">Siswa</span>
+          </h2>
+          <p class="section-subtitle">
+            Karya yang dikembangkan oleh siswa XI PPLG
+          </p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="projects-grid">
+          <div class="card-project">
+            <div class="icon-structure-box">
+              <i class="fas fa-coins"></i>
+            </div>
+            <h4 class="project-title">Sistem Keuangan Kelas</h4>
+            <p class="project-author">by Adlu</p>
+            <a
+              href="https://sistemkeuangankelas.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              Kunjungi <i class="fas fa-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <div class="card-project">
+            <div class="icon-structure-box">
+              <i class="fas fa-music"></i>
+            </div>
+            <h4 class="project-title">Spotiware</h4>
+            <p class="project-author">by Wildan</p>
+            <a
+              href="https://ryddzyen.github.io/Spotiware-PPLG/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              Kunjungi <i class="fas fa-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <div id="student-modal" class="modal-overlay hidden">
       <div class="modal-card">
@@ -358,6 +479,33 @@
       </div>
     </div>
 
+    <div id="galeri-modal" class="modal-overlay hidden">
+      <div class="modal-card galeri-modal-card">
+        <button onclick="closegaleriModal()" class="modal-close-btn">
+          <i class="fas fa-times modal-close-icon"></i>
+        </button>
+        <button
+          onclick="showgaleriImage(currentgaleriIndex - 1)"
+          class="galeri-nav-btn galeri-nav-prev"
+          aria-label="Foto sebelumnya"
+        >
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <img id="galeri-modal-img" src="" alt="" class="galeri-modal-img" />
+        <button
+          onclick="showgaleriImage(currentgaleriIndex + 1)"
+          class="galeri-nav-btn galeri-nav-next"
+          aria-label="Foto berikutnya"
+        >
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="galeri-modal-header">
+          <p id="galeri-modal-title" class="galeri-modal-title"></p>
+          <p id="galeri-modal-sub" class="galeri-modal-sub"></p>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-brand">
@@ -377,5 +525,7 @@
         </p>
       </div>
     </footer>
+
+    <script src="jawa.js"></script>
   </body>
 </html>
