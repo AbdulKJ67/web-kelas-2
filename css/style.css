@@ -367,6 +367,7 @@ body {
   margin-top: 0.25rem;
 }
 
+/* SECTION STRUCTURE */
 .section-structure {
   padding: 5rem 0;
   background-color: rgba(24, 24, 24, 0.5);
@@ -413,18 +414,14 @@ body {
 
 .card-wali-kelas {
   background-color: var(--card);
-  border: 2px solid rgba(255, 215, 0, 0.4);
-  border-radius: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
   padding: 1.5rem;
-  max-width: 24rem;
+  max-width: 20rem;
   width: 100%;
-  text-align: center;
+  text-align: left;
   transition: all 0.3s;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
-.card-wali-kelas:hover {
-  border-color: var(--yellow);
 }
 
 .img-wali-kelas-box {
@@ -448,13 +445,18 @@ body {
   object-fit: cover;
 }
 
+.wali-kelas-header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .wali-kelas-name {
   font-size: 1.25rem;
   font-weight: 700;
   color: #ffffff;
 }
 
-.wali-kelas-desc {
+.wali-kelas-fullname {
   font-size: 0.75rem;
   color: var(--gray-mid);
   margin-top: 0.25rem;
@@ -463,11 +465,9 @@ body {
 .badge-role-gold {
   display: inline-block;
   padding: 0.25rem 0.75rem;
-  background-color: rgba(255, 215, 0, 0.2);
   color: var(--yellow);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  border-radius: 9999px;
   margin-bottom: 0.5rem;
 }
 
@@ -687,8 +687,6 @@ body {
   min-width: 0;
   gap: 1.5rem;
   padding: 2rem;
-
-  position: relative;
   background:
     /* kiri atas */
     linear-gradient(var(--gray-light), var(--gray-light)) top left / 20px 1px
@@ -729,9 +727,9 @@ body {
 }
 
 .galeri-img img:hover {
-  transform: rotate(2deg) scale(1.03);
-  transition: .2s ease-out;
-  box-shadow: 4px 4px 0px #ff9509f6;
+  transform: rotate(3deg) scale(1.03);
+  transition: 0.2s ease-out;
+  box-shadow: 6px 6px 0px #ff9509f6;
 }
 
 .galeri-text {
@@ -757,7 +755,7 @@ body {
 
 .galeri-header .tanggal {
   font-weight: 300;
-  color: var(--gray-mid);
+  color: var(--yellow);
   font-size: 0.8rem;
 }
 
@@ -770,21 +768,22 @@ body {
   text-justify: center;
 }
 
+/* SECTION MODAL*/
 .modal-overlay {
   position: fixed;
   inset: 0;
   z-index: 50;
-  background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  background-color: #151515b6;
 }
 
 .modal-card {
-  background-color: var(--card);
-  border: 1px solid rgba(255, 215, 0, 0.3);
+  background-color: #7474744b;
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(205, 205, 205, 0.30196078431372547);
   border-radius: 1rem;
   max-width: 28rem;
   width: 100%;
@@ -797,7 +796,7 @@ body {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  color: var(--gray-mid);
+  color: #fff;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -805,7 +804,8 @@ body {
 }
 
 .modal-close-btn:hover {
-  color: #ffffff;
+  color: #232323;
+  transition: 0.1s ease;
 }
 
 .modal-close-icon {
@@ -822,7 +822,7 @@ body {
   margin: 0 auto 1rem;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--yellow);
+  border: 3px solid var(--gray-light);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
@@ -834,7 +834,7 @@ body {
 }
 
 .modal-role {
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   color: var(--gray-mid);
   margin-bottom: 1.5rem;
 }
@@ -842,6 +842,7 @@ body {
 .modal-info-box {
   background-color: var(--accent);
   border-radius: 0.75rem;
+  box-shadow: 0 0 8px #00000063;
   padding: 1rem;
   text-align: left;
   border: 1px solid var(--border);
@@ -970,6 +971,56 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .modal-card {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    max-width: 40rem;
+    align-items: center;
+    justify-content: start;
+  }
+  .modal-body {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+
+  .modal-close-btn {
+    top: 0;
+    font-size: 1.5rem;
+  }
+
+  .modal-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    gap: 1rem;
+    min-width: 0;
+  }
+  .modal-header {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+  }
+  .modal-name {
+    font-size: 1rem;
+  }
+
+  .modal-title {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+  }
+
   .footer-container {
     flex-direction: row;
     justify-content: center;
@@ -1005,6 +1056,56 @@ body {
     font-size: 1.5rem;
   }
 
+  .modal-card {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    max-width: 40rem;
+    align-items: center;
+    justify-content: start;
+  }
+  .modal-body {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+
+  .modal-close-btn {
+    top: 0;
+    font-size: 1.5rem;
+  }
+
+  .modal-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    gap: 1rem;
+    min-width: 0;
+  }
+  .modal-header {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+  }
+  .modal-name {
+    font-size: 1rem;
+  }
+
+  .modal-title {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+  }
+
   .search-wrapper {
     width: 20rem;
   }
@@ -1038,6 +1139,56 @@ body {
 
   .galeri-header .event {
     font-size: 1.5rem;
+  }
+
+  .modal-card {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    max-width: 40rem;
+    align-items: center;
+    justify-content: start;
+  }
+  .modal-body {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+
+  .modal-close-btn {
+    top: 0;
+    font-size: 1.5rem;
+  }
+
+  .modal-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    gap: 1rem;
+    min-width: 0;
+  }
+  .modal-header {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+  }
+  .modal-name {
+    font-size: 1rem;
+  }
+
+  .modal-title {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
   }
 
   .hero-cta-group {

@@ -163,3 +163,4 @@ document.getElementById('mobile-menu-btn').addEventListener('click', () => {
 window.onload = function() {
     renderStudents();
 };
+

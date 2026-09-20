@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id" class="dark scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -117,6 +117,7 @@
       </div>
     </section>
 
+    <!-- SECTION STRUCTURE -->
     <section id="struktur" class="section-structure">
       <div class="nav-container">
         <div class="section-header">
@@ -140,9 +141,12 @@
                 class="wali-kelas-img"
               />
             </div>
-            <span class="badge-role-gold">Wali Kelas</span>
-            <h3 class="wali-kelas-name">Pak Devita</h3>
-            <p class="wali-kelas-desc">Pembimbing XI PPLG</p>
+
+            <div class="wali-kelas-header">
+              <h3 class="wali-kelas-name">Pak Devita</h3>
+              <span class="badge-role-gold">Wali Kelas</span>
+            </div>
+            <p class="wali-kelas-fullname">Devita hermanto S.Kom</p>
           </div>
         </div>
 
@@ -185,6 +189,7 @@
         </div>
       </div>
     </section>
+    <!-- SECTION STRUCTURE END -->
 
     <section id="siswa" class="section-students">
       <div class="nav-container">
@@ -218,7 +223,7 @@
       </div>
     </section>
 
-    <!-- section gallery -->
+    <!-- SECTION GALERI -->
     <section id="galeri" class="section-galeri">
       <div class="nav-container">
         <div class="section-header">
@@ -314,30 +319,39 @@
         </div>
       </div>
     </section>
+    <!-- SECTION GALERI END -->
 
     <div id="student-modal" class="modal-overlay hidden">
       <div class="modal-card">
         <button onclick="closeModal()" class="modal-close-btn">
           <i class="fas fa-times modal-close-icon"></i>
         </button>
+
         <div class="modal-body">
           <img id="modal-img" src="img/pplglogo.png" alt="" class="modal-img" />
-          <span id="modal-absen" class="badge-role-gold"></span>
-          <h3 id="modal-name" class="modal-name"></h3>
-          <p id="modal-role" class="modal-role"></p>
 
-          <div class="modal-info-box">
-            <div class="modal-info-row">
-              <span class="modal-info-label">Kelas:</span>
-              <span class="modal-info-value">XI PPLG</span>
+          <div class="modal-info">
+            <div class="modal-header">
+              <span id="modal-absen" class="badge-role-gold"></span>
+              <div class="modal-title">
+                <h3 id="modal-name" class="modal-name"></h3>
+                <p id="modal-role" class="modal-role"></p>
+              </div>
             </div>
-            <div class="modal-info-row">
-              <span class="modal-info-label">Hobi:</span>
-              <span id="modal-hobi" class="modal-info-value">mbuh</span>
-            </div>
-            <div class="modal-info-row">
-              <span class="modal-info-label">Tanggal Lahir:</span>
-              <span id="modal-ttl" class="modal-info-value-gold">mbuh</span>
+
+            <div class="modal-info-box">
+              <div class="modal-info-row">
+                <span class="modal-info-label">Kelas:</span>
+                <span class="modal-info-value">XI PPLG</span>
+              </div>
+              <div class="modal-info-row">
+                <span class="modal-info-label">Hobi:</span>
+                <span id="modal-hobi" class="modal-info-value">mbuh</span>
+              </div>
+              <div class="modal-info-row">
+                <span class="modal-info-label">Tanggal Lahir:</span>
+                <span id="modal-ttl" class="modal-info-value-gold">mbuh</span>
+              </div>
             </div>
           </div>
         </div>
