@@ -9,20 +9,23 @@
   --gray-light: #d1d5db;
   --gray-mid: #9ca3af;
   --gray-dark: #6b7280;
+  --section-alt-bg-soft: rgba(0, 0, 0, 0.025);
 }
 
 [data-theme="light"] {
-  --bg: #f4f4f5;
-  --fg: #14181f;
-  --card: #ffffff;
-  --border: #2a2a2a;
+  --bg: #e6e5e5;
+  --fg: #1d232d;
+  --card: #dcdada;
+  --border: #1a1a1a;
   --accent: #262626;
-  --gray-light: #374151;
+  --gray-light: #949393;
   --gray-mid: #52525b;
-  --gray-dark: #71717a;
+  --gray-dark: #374151;
+  --yellow: #ffa200;
+  --gold: #c07a00;
   --navbar-bg: rgba(255, 255, 255, 0.9);
   --section-alt-bg-strong: rgba(0, 0, 0, 0.035);
-  --section-alt-bg-soft: rgba(0, 0, 0, 0.025);
+  --section-alt-bg-soft: rgba(15, 15, 15, 0.105);
   --hairline: rgba(0, 0, 0, 0.08);
   --skeleton-base: #e5e5e5;
   --skeleton-shine: #f2f2f2;
@@ -398,7 +401,7 @@ html.is-typing body > * {
   font-size: 2.25rem;
   font-weight: 800;
   letter-spacing: -0.025em;
-  color: #ffffff;
+  color: var(--fg);
   line-height: 1.25;
   margin-bottom: 1.5rem;
 }
@@ -445,7 +448,7 @@ html.is-typing body > * {
   padding: 0.875rem 1.75rem;
   border-radius: 0.75rem;
   background-color: var(--card);
-  color: #ffffff;
+  color: var(--fg);
   font-weight: 700;
   font-size: 0.875rem;
   text-decoration: none;
@@ -518,7 +521,7 @@ html.is-typing body > * {
 .hero-caption-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--fg);
 }
 
 .hero-caption-sub {
@@ -531,7 +534,7 @@ html.is-typing body > * {
 /* SECTION STRUCTURE */
 .section-structure {
   padding: 5rem 0;
-  background-color: rgba(24, 24, 24, 0.5);
+  background-color: var(--section-alt-bg-soft);
   border-top: 1px solid rgba(42, 42, 42, 0.5);
   border-bottom: 1px solid rgba(42, 42, 42, 0.5);
 }
@@ -545,7 +548,7 @@ html.is-typing body > * {
 .section-title {
   font-size: 1.875rem;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--fg);
   margin-bottom: 0.75rem;
 }
 
@@ -623,7 +626,7 @@ html.is-typing body > * {
 .wali-kelas-name {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--fg);
 }
 
 .wali-kelas-fullname {
@@ -684,7 +687,7 @@ html.is-typing body > * {
 .structure-role-name {
   font-size: 1.125rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--fg);
   margin-top: 0.25rem;
 }
 
@@ -718,7 +721,7 @@ html.is-typing body > * {
   border-radius: 0.75rem;
   padding: 0.75rem 1rem 0.75rem 2.75rem;
   font-size: 0.875rem;
-  color: #ffffff;
+  color: var(--fg);
   outline: none;
   transition: border-color 0.2s;
 }
@@ -871,7 +874,7 @@ html.is-typing body > * {
 
 .card-student-name {
   font-weight: 700;
-  color: #ffffff;
+  color: var(--fg);
   font-size: 0.875rem;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1008,7 +1011,7 @@ html.is-typing body > * {
 .galeri-des {
   font-size: 0.8rem;
   width: 90%;
-  color: var(--gray-light);
+  color: var(--gray-dark);
   line-height: 1.5;
   text-align: center;
   text-justify: center;
@@ -1075,18 +1078,18 @@ html.is-typing body > * {
 .modal-name {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--fg);
   margin-bottom: 0.25rem;
 }
 
 .modal-role {
   font-size: 0.8rem;
-  color: var(--gray-mid);
+  color: var(--gray-light);
   margin-bottom: 1.5rem;
 }
 
 .modal-info-box {
-  background-color: var(--accent);
+  background-color: var(--fg);
   border-radius: 0.75rem;
   box-shadow: 0 0 8px #00000063;
   padding: 1rem;
@@ -1103,11 +1106,11 @@ html.is-typing body > * {
 }
 
 .modal-info-label {
-  color: var(--gray-mid);
+  color: var(--gray-light);
 }
 
 .modal-info-value {
-  color: #ffffff;
+  color: var(--gray-light);
   font-weight: 600;
 }
 
@@ -1312,7 +1315,7 @@ html.is-typing body > * {
 
 .footer-brand-text {
   font-weight: 500;
-  color: #ffffff;
+  color: var(--fg);
   font-size: 0.875rem;
 }
 
