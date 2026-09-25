@@ -8,7 +8,7 @@
   --gold: #ee9f00;
   --gray-light: #d1d5db;
   --gray-mid: #9ca3af;
-  --gray-dark: #6b7280;
+  --gray-dark: #282b31;
   --section-alt-bg-soft: rgba(0, 0, 0, 0.025);
 }
 
@@ -20,9 +20,9 @@
   --accent: #262626;
   --gray-light: #949393;
   --gray-mid: #52525b;
-  --gray-dark: #374151;
-  --yellow: #ffa200;
-  --gold: #c07a00;
+  --gray-dark: #2c3036;
+  --yellow: #ff940a;
+  --gold: #c57600;
   --navbar-bg: rgba(255, 255, 255, 0.9);
   --section-alt-bg-strong: rgba(0, 0, 0, 0.035);
   --section-alt-bg-soft: rgba(15, 15, 15, 0.105);
@@ -1089,7 +1089,11 @@ html.is-typing body > * {
 }
 
 .modal-info-box {
+<<<<<<< HEAD
   background-color: var(--fg);
+=======
+  background-color: var(--gray-dark);
+>>>>>>> 0737a6e (Update lorem)
   border-radius: 0.75rem;
   box-shadow: 0 0 8px #00000063;
   padding: 1rem;
@@ -1450,7 +1454,7 @@ html.is-typing body > * {
     width: 100%;
   }
 
-  .galeri-modal-header{
+  .galeri-modal-header {
     display: flex;
     flex-direction: column;
     gap: 1rem;
